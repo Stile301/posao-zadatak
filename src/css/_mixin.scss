@@ -1,0 +1,28 @@
+@mixin grayText {
+  font-family: $fontHelveticaNeue;
+  font-size: 15px;
+  line-height: 18px;
+  color: $whiteColor;
+}
+@mixin btnImgSet {
+  border-color: $grayColor;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@mixin imageContainer {
+  width: 100vw;
+  overflow: auto;
+  position: absolute;
+  right: 0;
+  display:flex;
+  gap: 10px;
+  height: 200px;
+  flex-direction: row-reverse;
+}
+@mixin imageRows {
+  grid-row: 2;
+  grid-column: 1 / span 6;
+  float: right;
+  position: relative;
+  clip-path: $clipPath;
+}

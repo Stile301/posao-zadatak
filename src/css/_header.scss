@@ -1,0 +1,28 @@
+header{
+  display: contents;
+  .left_header_container{
+    background: $grayColor;
+    display: block;
+    height: 100px;
+    border-radius: 0px 0px 5px 5px;
+    grid-row: 1;
+    grid-column: 1 / span 4
+  }
+  .right_header_container{
+    background: $grayColor;
+    border-radius: 0px 0px 5px 5px;
+    grid-row: 1;
+    grid-column: 5 / span 8;
+    display: grid;
+    grid-template-columns: repeat(8, [col-start] $columnWidth);
+    column-gap: 20px;
+    align-content: center;
+    p{
+      grid-row: 1;
+      grid-column: 2 / span 6;
+      &.gray_text{
+        @include grayText
+      }
+    }
+  }
+}

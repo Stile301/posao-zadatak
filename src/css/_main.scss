@@ -1,0 +1,99 @@
+.body{
+  @extend header;
+  .image_container{
+    grid-row: 2;
+    grid-column: 1 / span 8;
+    display: grid;
+    grid-template-columns: repeat(8, [col-start] $columnWidth);
+    grid-template-rows: repeat(2, [row-start] 200px);;
+    column-gap: 20px;
+    row-gap: 10px;
+    .img_row{
+      @extend header;
+      .img_row_images{
+        grid-row: 1;
+        grid-column: 1 / span 8;
+        clip-path: $clipPath;
+        float: right;
+        position: relative;
+        div{
+          @include imageContainer;
+          img{
+            border-radius: $imgBorderRadius;
+          }
+        }
+      }
+    }
+    .img_btn_row_images{
+      @include imageRows;
+      div{
+        @include imageContainer;
+        img{
+          border-radius: $imgBorderRadius;
+        }
+      }
+    }
+    .img_btn_row{
+      @extend header;
+      .img_btn_row_images{
+        @include imageRows;
+        div{
+          @include imageContainer;
+          img{
+            border-radius: $imgBorderRadius;
+          }
+        }
+      }
+      .img_btn_row_btns{
+        grid-row: 2;
+        grid-column: 8 / span 1;
+        button{
+          display: block;
+          width: 60px;
+          height: 60px;
+          border: 1px solid $darkBlueColor;
+          border-radius: 5px;
+          margin-block-end:10px;
+          background-color: transparent;
+          &#left{
+            background-image: url("../assets/arrow-gray-left.png");
+            @include btnImgSet;
+            &:hover{
+              background-image: url("../assets/arrow-blue-left.png");
+              border-color: $darkBlueColor;
+            }
+          }
+          &#right{
+            background-image: url("../assets/arrow-gray-right.png");
+            @include btnImgSet;
+            &:hover{
+              background-image: url("../assets/arrow-blue-right.png");
+              border-color: $darkBlueColor;
+            }
+          }
+        }
+      }
+    }
+  }
+  .text_container{
+    grid-row: 2;
+    grid-column: 9 / span 4;
+    column-gap: 20px;
+    .header{
+      font-family: $fontSourceSansPro;
+      font-size: 32px;
+      line-height: 37.5px;
+      letter-spacing: -0.2px;
+      color: $darkBlueColor;
+      font-weight: 500;
+    }
+    .subheader{
+      font-family: $fontSourceSansPro;
+      font-size: 18px;
+      line-height: 26px;
+      letter-spacing: -0.2px;
+      color: $darkGrayColor;
+      font-weight: 300;
+    }
+  }
+}

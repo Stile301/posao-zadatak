@@ -1,0 +1,22 @@
+@import "./variables";
+@import "./mixin";
+
+*{
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+.grid{
+  width: 100%;
+  max-width: 940px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] $columnWidth);
+  grid-template-rows: 100px auto 100px;
+  column-gap: 20px;
+  row-gap: 60px;
+}
+
+@import "./header";
+@import "./main";
+@import "./footer";
