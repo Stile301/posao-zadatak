@@ -64,7 +64,7 @@ $(function() {
           top: 0
         })
          .insertAfter(element.find('img:last'))
-         .fadeIn("slow");
+         .fadeIn(400);
          firstElement.remove()
       });
     });
